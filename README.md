@@ -1,10 +1,10 @@
-# Waves Explorer Lite
+# Lunes Explorer Lite
 
-Waves Testnet Blockchain Explorer
+Lunes Testnet Blockchain Explorer
 
 # Demo
 
-Demo is available on http://testnet.wavesexplorer.com
+Demo is available on http://blockchain-testnet.lunes.io
 
 # Setup
 
