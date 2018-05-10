@@ -2,19 +2,19 @@
     'use strict';
 
     angular.module('web').constant('appConfig', {
-        apiDomain: 'https://nodes.wavesnodes.com',
+        apiDomain: 'https://testnet.lunes.io',
         blockchainName: 'Mainnet',
-        title: 'Waves Explorer',
+        title: 'Lunes Explorer',
         nodes: [{
             url: 'https://nodes.wavesnodes.com',
             maintainer: 'Waves'
         }],
         peerExplorer: {
-            url: 'https://testnet.wavesexplorer.com',
+            url: 'https://testnet.lunes.io/api-docs/index.html',
             title: 'TESTNET Explorer'
         },
         wallet: {
-            url: 'https://beta.wavesplatform.com',
+            url: 'https://wallet.lunes.io/',
             title: 'Wallet'
         }
     });

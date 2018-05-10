@@ -14,11 +14,11 @@
             {url: 'http://52.192.190.54:6869', maintainer: 'Waves', showAsLink: true}
         ],
         peerExplorer: {
-            url: 'http://devnet.wavesexplorer.com',
+            url: 'https://testnet.lunes.io/api-docs/index.html',
             title: 'Devnet Explorer'
         },
         wallet: {
-            url: 'http://testnet.waveswallet.io',
+            url: 'https://wallet.lunes.io/',
             title: 'Wallet'
         }
     });

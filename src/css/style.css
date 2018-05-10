@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Offside';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Offside'), local('Offside-Regular'), url(https://fonts.gstatic.com/s/offside/v5/HI_KiYMWKa9QrAykc5boRw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
 .navbar-form>.form-group {
     display: inline-flex;
     width: auto;
@@ -54,11 +69,11 @@
 }
 
 .mono {
-    font-family: monospace;
+    font-family: 'Roboto', sans-serif;
 }
 
 #loading-bar .bar {
-    background-color: #95C6E5;
+    background-color: #5e4094;
     height: 3px;
 }
 
@@ -66,6 +81,6 @@
     width: 24px;
     height: 24px;
     border-width: 3px;
-    border-top-color:  #95C6E5;
-    border-left-color: #95C6E5;
+    border-top-color:  #5e4094;
+    border-left-color: #5e4094;
 }

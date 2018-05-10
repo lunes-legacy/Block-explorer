@@ -44,6 +44,9 @@
             $http.get(apiService.consensus.basetarget).then(function (response) {
                 ctrl.consensus.baseTarget = response.data.baseTarget;
             });
+            $http.get(apiService.consensus.algo).then(function (response) {
+                ctrl.consensus.algo = response.data.consensusAlgo;
+            });
         }
     }
 

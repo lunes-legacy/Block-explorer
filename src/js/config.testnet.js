@@ -16,11 +16,11 @@
             captchaKey: '6Le9hSgUAAAAAAtIe04SrgDy23PsBZOazfb-li66'
         },
         peerExplorer: {
-            url: 'https://wavesexplorer.com',
+            url: 'https://testnet.lunes.io/api-docs/index.html',
             title: 'MAINNET Explorer'
         },
         wallet: {
-            url: 'https://testnet.waveswallet.io',
+            url: 'https://wallet.lunes.io/',
             title: 'Wallet'
         }
     });

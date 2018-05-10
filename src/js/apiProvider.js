@@ -11,8 +11,8 @@
 
     function apiInterface(url) {
         return {
-            version: url + '/node/version',
-            status: url + '/node/status',
+            version: url + '/utils/lunesnode/version',
+            status: url + '/utils/lunesnode/status',
             blocks: {
                 seq: function (from, to) {
                     return url + '/blocks/seq/' + from + '/' + to;

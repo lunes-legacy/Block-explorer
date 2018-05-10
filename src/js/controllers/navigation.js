@@ -10,12 +10,12 @@
             menuItems.push({
                 url: 'blocks',
                 title: 'Blocks',
-                icon: 'glyphicon glyphicon-th-list'
+                icon: '../../icons/blocks.svg'
             });
             menuItems.push({
                 url: 'peers',
                 title: 'Peers',
-                icon: 'glyphicon glyphicon-transfer'
+                icon: '../../icons/peer.svg'
             });
             if (config.faucet) {
                 menuItems.push({
@@ -27,7 +27,7 @@
             menuItems.push({
                 url: 'nodes',
                 title: 'Nodes',
-                icon: 'glyphicon glyphicon-tasks'
+                icon: '../../icons/node.svg'
             });
             nav.menuItems = menuItems;
 
