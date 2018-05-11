@@ -1,10 +1,10 @@
 {
-  "name": "waves-explorer-lite",
+  "name": "lunes-explorer-lite",
   "version": "1.1.7",
-  "description": "Waves blockchain information tool",
+  "description": "Lunes blockchain information tool",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wavesplatform/WavesExplorerLite.git"
+    "url": "https://github.com/Lunes-platform/BLock-Explorer.git"
   },
   "license": "Apache-2.0",
   "dependencies": {
