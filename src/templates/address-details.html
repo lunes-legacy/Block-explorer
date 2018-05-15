@@ -3,7 +3,7 @@
     <div class="col-lg-12">
         <div class="profile-user-info profile-user-info-striped">
             <div class="profile-info-row">
-                <div class="profile-info-name width-20">Regular Balance</div>
+                <div class="profile-info-name">Regular Balance</div>
                 <div class="profile-info-value">{{ctrl.balance.regular|wavelets}}</div>
             </div>
             <div class="profile-info-row">
@@ -29,61 +29,66 @@
 
         <uib-tabset>
             <uib-tab index="0" heading="Last 100 transactions" select="ctrl.loadTransactions()">
-                <table ng-show="ctrl.txs.length > 0" class="table blockDetails">
-                    <thead>
-                    <tr class="active">
-                        <th>ID</th>
-                        <th>Type</th>
-                        <th>Timestamp</th>
-                        <th>Sender</th>
-                        <th></th>
-                        <th>Receiver</th>
-                        <th>Amount in</th>
-                        <th>Amount out</th>
-                        <th>Price</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="item in ctrl.txs | orderBy:'timestamp':true">
-                        <td><waves-transaction-ref tx-id="item.id" max-length="7"></waves-transaction-ref></td>
-                        <td>{{item.type|txtype}}</td>
-                        <td>{{item.timestamp|wavesdate}}</td>
+                <div style="overflow-x:auto;">
+                    <table ng-show="ctrl.txs.length > 0" class="table blockDetails">
+                        <thead>
+                            <tr class="active">
+                                <th>ID</th>
+                                <th>Type</th>
+                                <th>Timestamp</th>
+                                <th>Sender</th>
+                                <th></th>
+                                <th>Receiver</th>
+                                <th>Amount in</th>
+                                <th>Amount out</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in ctrl.txs | orderBy:'timestamp':true">
+                                <td>
+                                    <waves-transaction-ref tx-id="item.id" max-length="7"></waves-transaction-ref>
+                                </td>
+                                <td>{{item.type|txtype}}</td>
+                                <td>{{item.timestamp|wavesdate}}</td>
 
-                        <td ng-if="item.sender!==ctrl.address">
-                            <waves-endpoint-ref endpoint="item.sender" max-length="16"></waves-endpoint-ref>
-                        </td>
-                        <td ng-if="item.sender===ctrl.address">
-                            <span class="mono">{{item.sender|limitTo:16}}&hellip;</span></td>
-                        <td ng-switch="item.type">
-                            <span ng-switch-when="7" class="glyphicon glyphicon-resize-horizontal" aria-hidden="true"
-                                  class="text-success"></span>
-                            <span ng-switch-default class="glyphicon glyphicon-arrow-right" aria-hidden="true"
-                                  ng-class="{'text-danger':item.outgoing,'text-success':!item.outgoing}"></span>
-                        </td>
-                        <td ng-if="item.recipient!==ctrl.address">
-                            <waves-endpoint-ref endpoint="item.recipient" max-length="16"></waves-endpoint-ref>
-                        </td>
-                        <td ng-if="item.recipient===ctrl.address">
-                            <span class="mono">{{item.recipient|limitTo:16}}&hellip;</span></td>
-                        <td>{{item.amountIn.amount}} {{item.amountIn.currency}}</td>
-                        <td>{{item.amountOut.amount}} {{item.amountOut.currency}}</td>
-                        <td>{{item.extras.price}}</td>
-                    </tr>
-                    </tbody>
-                </table>
+                                <td ng-if="item.sender!==ctrl.address">
+                                    <waves-endpoint-ref endpoint="item.sender" max-length="16"></waves-endpoint-ref>
+                                </td>
+                                <td ng-if="item.sender===ctrl.address">
+                                    <span class="mono">{{item.sender|limitTo:16}}&hellip;</span>
+                                </td>
+                                <td ng-switch="item.type">
+                                    <span ng-switch-when="7" class="glyphicon glyphicon-resize-horizontal" aria-hidden="true" class="text-success"></span>
+                                    <span ng-switch-default class="glyphicon glyphicon-arrow-right" aria-hidden="true" ng-class="{'text-danger':item.outgoing,'text-success':!item.outgoing}"></span>
+                                </td>
+                                <td ng-if="item.recipient!==ctrl.address">
+                                    <waves-endpoint-ref endpoint="item.recipient" max-length="16"></waves-endpoint-ref>
+                                </td>
+                                <td ng-if="item.recipient===ctrl.address">
+                                    <span class="mono">{{item.recipient|limitTo:16}}&hellip;</span>
+                                </td>
+                                <td>{{item.amountIn.amount}} {{item.amountIn.currency}}</td>
+                                <td>{{item.amountOut.amount}} {{item.amountOut.currency}}</td>
+                                <td>{{item.extras.price}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <div class="panel-body" ng-show="ctrl.txs.length == 0">{{ctrl.txsMessage}}</div>
             </uib-tab>
             <uib-tab index="1" heading="Aliases" select="ctrl.loadAliases()">
                 <table ng-show="ctrl.aliases.length > 0" class="table blockDetails">
                     <thead>
-                    <tr class="active">
-                        <th>Alias</th>
-                    </tr>
+                        <tr class="active">
+                            <th>Alias</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="item in ctrl.aliases">
-                        <td>{{item.text|limitTo:40}}</td>
-                    </tr>
+                        <tr ng-repeat="item in ctrl.aliases">
+                            <td>{{item.text|limitTo:40}}</td>
+                        </tr>
                     </tbody>
                 </table>
                 <div class="panel-body" ng-show="ctrl.aliases.length == 0">{{ctrl.aliasesMessage}}</div>
@@ -91,15 +96,17 @@
             <uib-tab index="2" heading="Assets" select="ctrl.loadAssets()">
                 <table ng-show="ctrl.assets.length > 0" class="table blockDetails">
                     <thead>
-                    <tr class="active">
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Balance</th>
-                    </tr>
+                        <tr class="active">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Balance</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr ng-repeat="item in ctrl.assets">
-                            <td><waves-transaction-ref tx-id="item.id"></waves-transaction-ref></td>
+                            <td>
+                                <waves-transaction-ref tx-id="item.id"></waves-transaction-ref>
+                            </td>
                             <td>{{item.name}}</td>
                             <td>{{item.balance|assetunits:item.decimals}}</td>
                         </tr>
