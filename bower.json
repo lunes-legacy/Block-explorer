@@ -1,7 +1,7 @@
 {
-  "name": "waves-explorer-lite",
-  "description": "Waves blockchain information tool",
+  "name": "lunes-explorer",
+  "description": "Lunes Blockchain Explorer",
   "main": "index.html",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/wavesplatform/WavesExplorerLite"
+  "homepage": "https://github.com/Lunes-platform/Block-Explorer"
 }

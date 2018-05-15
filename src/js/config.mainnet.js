@@ -6,8 +6,8 @@
         blockchainName: 'Mainnet',
         title: 'Lunes Explorer',
         nodes: [{
-            url: 'https://nodes.wavesnodes.com',
-            maintainer: 'Waves'
+            url: 'https://testnet.lunes.io',
+            maintainer: 'Lunes'
         }],
         peerExplorer: {
             url: 'https://testnet.lunes.io/api-docs/index.html',
