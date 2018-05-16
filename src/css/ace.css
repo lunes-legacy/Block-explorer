@@ -9447,7 +9447,7 @@ textarea.input-transparent:focus,
   border-radius: 5px 5px 0px 0px !important;
   border-color: #3b1878;
   background-color: #54d467;
-  color: white;
+  color: white !important;
   margin-right: -1px;
   line-height: 18px;
   position: relative;
@@ -10231,25 +10231,25 @@ tr.detail-row > td {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 .widget-color-blue {
-  border-color: #307ECC;
+  border-color: #54d467;
 }
 .widget-color-blue > .widget-header {
-  background: #307ECC;
-  border-color: #307ECC;
+  background: #54d467;
+  border-color: #54d467;
 }
 .widget-color-blue2 {
-  border-color: #5090C1;
+  border-color: #54d467;
 }
 .widget-color-blue2 > .widget-header {
-  background: #5090C1;
-  border-color: #5090C1;
+  background:#54d467;
+  border-color: #54d467;
 }
 .widget-color-blue3 {
-  border-color: #6379AA;
+  border-color: #54d467;
 }
 .widget-color-blue3 > .widget-header {
-  background: #6379AA;
-  border-color: #6379AA;
+  background: #54d467;
+  border-color: #54d467;
 }
 .widget-color-green {
   border-color: #82AF6F;

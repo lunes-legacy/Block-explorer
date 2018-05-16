@@ -1,22 +1,22 @@
-<waves-page-header title="Address" subtitle="ctrl.address"></waves-page-header>
+<lunes-page-header title="Address" subtitle="ctrl.address"></lunes-page-header>
 <div class="row">
     <div class="col-lg-12">
         <div class="profile-user-info profile-user-info-striped">
             <div class="profile-info-row">
                 <div class="profile-info-name">Regular Balance</div>
-                <div class="profile-info-value">{{ctrl.balance.regular|wavelets}}</div>
+                <div class="profile-info-value">{{ctrl.balance.regular|luneslets}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Generating Balance</div>
-                <div class="profile-info-value">{{ctrl.balance.generating|wavelets}}</div>
+                <div class="profile-info-value">{{ctrl.balance.generating|luneslets}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Available Balance</div>
-                <div class="profile-info-value">{{ctrl.balance.available|wavelets}}</div>
+                <div class="profile-info-value">{{ctrl.balance.available|luneslets}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Effective Balance</div>
-                <div class="profile-info-value">{{ctrl.balance.effective|wavelets}}</div>
+                <div class="profile-info-value">{{ctrl.balance.effective|luneslets}}</div>
             </div>
         </div>
     </div>
@@ -47,13 +47,13 @@
                         <tbody>
                             <tr ng-repeat="item in ctrl.txs | orderBy:'timestamp':true">
                                 <td>
-                                    <waves-transaction-ref tx-id="item.id" max-length="7"></waves-transaction-ref>
+                                    <lunes-transaction-ref tx-id="item.id" max-length="7"></lunes-transaction-ref>
                                 </td>
                                 <td>{{item.type|txtype}}</td>
-                                <td>{{item.timestamp|wavesdate}}</td>
+                                <td>{{item.timestamp|lunesdate}}</td>
 
                                 <td ng-if="item.sender!==ctrl.address">
-                                    <waves-endpoint-ref endpoint="item.sender" max-length="16"></waves-endpoint-ref>
+                                    <lunes-endpoint-ref endpoint="item.sender" max-length="16"></lunes-endpoint-ref>
                                 </td>
                                 <td ng-if="item.sender===ctrl.address">
                                     <span class="mono">{{item.sender|limitTo:16}}&hellip;</span>
@@ -63,7 +63,7 @@
                                     <span ng-switch-default class="glyphicon glyphicon-arrow-right" aria-hidden="true" ng-class="{'text-danger':item.outgoing,'text-success':!item.outgoing}"></span>
                                 </td>
                                 <td ng-if="item.recipient!==ctrl.address">
-                                    <waves-endpoint-ref endpoint="item.recipient" max-length="16"></waves-endpoint-ref>
+                                    <lunes-endpoint-ref endpoint="item.recipient" max-length="16"></lunes-endpoint-ref>
                                 </td>
                                 <td ng-if="item.recipient===ctrl.address">
                                     <span class="mono">{{item.recipient|limitTo:16}}&hellip;</span>
@@ -105,7 +105,7 @@
                     <tbody>
                         <tr ng-repeat="item in ctrl.assets">
                             <td>
-                                <waves-transaction-ref tx-id="item.id"></waves-transaction-ref>
+                                <lunes-transaction-ref tx-id="item.id"></lunes-transaction-ref>
                             </td>
                             <td>{{item.name}}</td>
                             <td>{{item.balance|assetunits:item.decimals}}</td>

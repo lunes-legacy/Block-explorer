@@ -3,7 +3,7 @@
 
     angular
         .module('web')
-        .component('wavesTransactionTable', {
+        .component('lunesTransactionTable', {
             transclude: true,
             bindings: {
                 title: '@'

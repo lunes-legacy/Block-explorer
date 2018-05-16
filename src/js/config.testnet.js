@@ -2,21 +2,14 @@
     'use strict';
 
     angular.module('web').constant('appConfig', {
-        apiDomain: 'https://testnode3.wavesnodes.com',
-        title: 'Waves Testnet Explorer',
+        apiDomain: 'https://testnet.lunes.io',
+        title: 'Lunes Testnet Explorer',
         blockchainName: 'Testnet',
         nodes: [
-            {url: 'https://testnode1.wavesnodes.com', maintainer: 'Waves', showAsLink: true},
-            {url: 'https://testnode2.wavesnodes.com', maintainer: 'Waves', showAsLink: true},
-            {url: 'https://testnode3.wavesnodes.com', maintainer: 'Waves', showAsLink: true},
-            {url: 'https://testnode4.wavesnodes.com', maintainer: 'Waves', showAsLink: true}
+            {url: 'https://testnet.lunes.io', maintainer: 'Lunes', showAsLink: true},
         ],
-        faucet: {
-            url: 'https://testnode1.wavesnodes.com/faucet',
-            captchaKey: '6Le9hSgUAAAAAAtIe04SrgDy23PsBZOazfb-li66'
-        },
         peerExplorer: {
-            url: 'https://testnet.lunes.io/api-docs/index.html',
+            url: 'https://blockexplorer-testnet.lunes.io/',
             title: 'MAINNET Explorer'
         },
         wallet: {

@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-5 ver">
-        <waves-page-header title="Blocks"></waves-page-header>
+        <lunes-page-header title="Blocks"></lunes-page-header>
     </div>
     <div class="col-lg-7" >
         <ul uib-pagination total-items="ctrl.totalCount"
@@ -27,10 +27,10 @@
             </thead>
             <tbody>
             <tr ng-repeat="item in ctrl.blocks">
-                <td><waves-block-ref height="item.height"/></td>
-                <td>{{item.timestamp|wavesdate}}</td>
+                <td><lunes-block-ref height="item.height"/></td>
+                <td>{{item.timestamp|lunesdate}}</td>
                 <td>{{item["nxt-consensus"]["base-target"]}}</td>
-                <td><waves-endpoint-ref endpoint="item.generator"></waves-endpoint-ref></td>
+                <td><lunes-endpoint-ref endpoint="item.generator"></lunes-endpoint-ref></td>
                 <td><span class="mono">{{item.signature|limitTo:26}}&hellip;</span></td>
                 <td>{{item.transactionCount}}</td>
             </tr>

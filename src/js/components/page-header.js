@@ -3,7 +3,7 @@
 
     angular
         .module('web')
-        .component('wavesPageHeader', {
+        .component('lunesPageHeader', {
             bindings: {
                 title: '@',
                 subtitle: '<'

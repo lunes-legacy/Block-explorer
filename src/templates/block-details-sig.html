@@ -1,4 +1,4 @@
-<waves-page-header title="Block" subtitle="ctrl.signature"></waves-page-header>
+<lunes-page-header title="Block" subtitle="ctrl.signature"></lunes-page-header>
 
 <div class="row">
     <div class="col-lg-12" >
@@ -9,7 +9,7 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Timestamp</div>
-                <div class="profile-info-value">{{ctrl.details.timestamp|wavesdate}}</div>
+                <div class="profile-info-value">{{ctrl.details.timestamp|lunesdate}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Transactions</div>
@@ -21,7 +21,7 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Generator</div>
-                <div class="profile-info-value"><waves-endpoint-ref endpoint="ctrl.details.generator"></waves-endpoint-ref></div>
+                <div class="profile-info-value"><lunes-endpoint-ref endpoint="ctrl.details.generator"></lunes-endpoint-ref></div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Signature</div>
@@ -38,7 +38,7 @@
         </div>
         <h2 class="header smaller blue">Transactions</h2>
 
-        <waves-transaction-table title="Transactions">
+        <lunes-transaction-table title="Transactions">
             <table class="table blockDetails">
                 <thead>
                 <tr class="active">
@@ -54,15 +54,15 @@
                 <tbody>
                 <tr ng-repeat="item in ctrl.details.transactions">
                     <td>{{item.type}}</td>
-                    <td>{{item.fee|wavelets}}</td>
-                    <td>{{item.timestamp|wavesdate}}</td>
+                    <td>{{item.fee|luneslets}}</td>
+                    <td>{{item.timestamp|lunesdate}}</td>
                     <td><a class="mono" ui-sref="tx-details({id:item.id})">{{item.signature|limitTo:7}}...</a></td>
-                    <td><waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref></td>
-                    <td><waves-endpoint-ref endpoint="item.recipient" max-length="12"></waves-endpoint-ref></td>
-                    <td><span class="pull-right">{{item.amount|wavelets}}</span></td>
+                    <td><lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref></td>
+                    <td><lunes-endpoint-ref endpoint="item.recipient" max-length="12"></lunes-endpoint-ref></td>
+                    <td><span class="pull-right">{{item.amount|luneslets}}</span></td>
                 </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </lunes-transaction-table>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<waves-page-header title="Block" subtitle="ctrl.height.toString()"></waves-page-header>
+<lunes-page-header title="Block" subtitle="ctrl.height.toString()"></lunes-page-header>
 <div class="row">
     <div class="col-lg-12">
         <div style="overflow-x:auto;">
@@ -20,7 +20,7 @@
                 </div>
                 <div class="profile-info-row">
                     <div class="profile-info-name">Timestamp</div>
-                    <div class="profile-info-value">{{ctrl.details.timestamp|wavesdate}}</div>
+                    <div class="profile-info-value">{{ctrl.details.timestamp|lunesdate}}</div>
                 </div>
                 <div class="profile-info-row">
                     <div class="profile-info-name">Transactions</div>
@@ -33,7 +33,7 @@
                 <div class="profile-info-row">
                     <div class="profile-info-name">Generator</div>
                     <div class="profile-info-value">
-                        <waves-endpoint-ref endpoint="ctrl.details.generator"></waves-endpoint-ref>
+                        <lunes-endpoint-ref endpoint="ctrl.details.generator"></lunes-endpoint-ref>
                     </div>
                 </div>
                 <div class="profile-info-row">
@@ -53,7 +53,7 @@
         </div>
         <h2 class="header smaller blue">Transactions</h2>
 
-        <waves-transaction-table title="Payments [type = 2]" ng-show="ctrl.payments.length > 0">
+        <lunes-transaction-table title="Payments [type = 2]" ng-show="ctrl.payments.length > 0">
             <table class="table blockDetails">
                 <thead>
                     <tr class="active">
@@ -73,15 +73,15 @@
                 <tbody>
                     <tr ng-repeat="item in ctrl.payments">
                         <td>
-                            <waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
                         <td>{{item.extras.fee}}</td>
-                        <td>{{item.timestamp|wavesdate}}</td>
+                        <td>{{item.timestamp|lunesdate}}</td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.recipient" max-length="12"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.recipient" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>
                             <span class="pull-right">{{item.extras.amount.amount}}</span>
@@ -92,9 +92,9 @@
                     </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </lunes-transaction-table>
 
-        <waves-transaction-table title="Asset Issue [type = 3]" ng-show="ctrl.assetIssue.length > 0">
+        <lunes-transaction-table title="Asset Issue [type = 3]" ng-show="ctrl.assetIssue.length > 0">
             <table class="table blockDetails">
                 <thead>
                     <tr class="active">
@@ -112,15 +112,15 @@
                 <tbody>
                     <tr ng-repeat="item in ctrl.assetIssue">
                         <td>
-                            <waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
                         <td>{{item.extras.fee}}</td>
-                        <td>{{item.timestamp|wavesdate}}</td>
+                        <td>{{item.timestamp|lunesdate}}</td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>
-                            <waves-transaction-ref tx-id="item.assetId" max-length="12"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.assetId" max-length="12"></lunes-transaction-ref>
                         </td>
                         <td>{{item.name}}</td>
                         <td>
@@ -129,9 +129,9 @@
                     </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </lunes-transaction-table>
 
-        <waves-transaction-table title="Asset Reissue [type = 5]" ng-show="ctrl.assetReissue.length > 0">
+        <lunes-transaction-table title="Asset Reissue [type = 5]" ng-show="ctrl.assetReissue.length > 0">
             <table class="table blockDetails">
                 <thead>
                     <tr class="active">
@@ -148,15 +148,15 @@
                 <tbody>
                     <tr ng-repeat="item in ctrl.assetReissue">
                         <td>
-                            <waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
                         <td>{{item.extras.fee}}</td>
-                        <td>{{item.timestamp|wavesdate}}</td>
+                        <td>{{item.timestamp|lunesdate}}</td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>
-                            <waves-transaction-ref tx-id="item.assetId" max-length="12"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.assetId" max-length="12"></lunes-transaction-ref>
                         </td>
                         <td>
                             <span class="pull-right">{{item.extras.amount.amount}}</span>
@@ -164,9 +164,9 @@
                     </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </lunes-transaction-table>
 
-        <waves-transaction-table title="Transfers [type = 4]" ng-show="ctrl.assetTransfer.length > 0">
+        <lunes-transaction-table title="Transfers [type = 4]" ng-show="ctrl.assetTransfer.length > 0">
             <table class="table blockDetails">
                 <thead>
                     <tr class="active">
@@ -182,27 +182,27 @@
                 <tbody>
                     <tr ng-repeat="item in ctrl.assetTransfer">
                         <td>
-                            <waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
                         <td>{{item.extras.fee}}</td>
-                        <td>{{item.timestamp|wavesdate}}</td>
+                        <td>{{item.timestamp|lunesdate}}</td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.recipient" max-length="12"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.recipient" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>{{item.extras.amount.amount}}</td>
                         <td ng-if="item.assetId === null">{{item.extras.amount.currency}}</td>
                         <td ng-if="item.assetId !== null">
-                            <waves-transaction-ref tx-id="item.assetId" text="item.extras.amount.currency"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.assetId" text="item.extras.amount.currency"></lunes-transaction-ref>
                         </td>
                     </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </lunes-transaction-table>
 
-        <waves-transaction-table title="Asset Burn [type = 6]" ng-show="ctrl.assetBurn.length > 0">
+        <lunes-transaction-table title="Asset Burn [type = 6]" ng-show="ctrl.assetBurn.length > 0">
             <table class="table blockDetails">
                 <thead>
                     <tr class="active">
@@ -219,15 +219,15 @@
                 <tbody>
                     <tr ng-repeat="item in ctrl.assetBurn">
                         <td>
-                            <waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
                         <td>{{item.extras.fee}}</td>
-                        <td>{{item.timestamp|wavesdate}}</td>
+                        <td>{{item.timestamp|lunesdate}}</td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>
-                            <waves-asset-ref asset-id="item.assetId" text="item.extras.amount.currency"></waves-asset-ref>
+                            <lunes-asset-ref asset-id="item.assetId" text="item.extras.amount.currency"></lunes-asset-ref>
                         </td>
                         <td>
                             <span class="pull-right">{{item.extras.amount.amount}}</span>
@@ -235,9 +235,9 @@
                     </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </lunes-transaction-table>
 
-        <waves-transaction-table title="Exchanges [type = 7]" ng-show="ctrl.exchange.length > 0">
+        <lunes-transaction-table title="Exchanges [type = 7]" ng-show="ctrl.exchange.length > 0">
             <table class="table blockDetails">
                 <thead>
                     <tr class="active">
@@ -254,30 +254,30 @@
                 <tbody>
                     <tr ng-repeat="item in ctrl.exchange">
                         <td>
-                            <waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
-                        <td>{{item.timestamp|wavesdate}}</td>
+                        <td>{{item.timestamp|lunesdate}}</td>
                         <td>{{item.extras.price}}</td>
                         <td>{{item.extras.amount.amount}}</td>
                         <td>{{item.extras.total.amount}}</td>
                         <td>
                             <nobr>
-                                <waves-asset-ref asset-id="item.order1.assetPair.amountAsset" text="item.extras.amount.currency"></waves-asset-ref> /
-                                <waves-asset-ref asset-id="item.order1.assetPair.priceAsset" text="item.extras.priceCurrency"></waves-asset-ref>
+                                <lunes-asset-ref asset-id="item.order1.assetPair.amountAsset" text="item.extras.amount.currency"></lunes-asset-ref> /
+                                <lunes-asset-ref asset-id="item.order1.assetPair.priceAsset" text="item.extras.priceCurrency"></lunes-asset-ref>
                             </nobr>
                         </td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.extras.from" max-length="12"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.extras.from" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.extras.to" max-length="12"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.extras.to" max-length="12"></lunes-endpoint-ref>
                         </td>
                     </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </lunes-transaction-table>
 
-        <waves-transaction-table title="Leasing [type = 8]" ng-show="ctrl.leasing.length > 0">
+        <lunes-transaction-table title="Leasing [type = 8]" ng-show="ctrl.leasing.length > 0">
             <table class="table blockDetails">
                 <thead>
                     <tr class="active">
@@ -292,23 +292,23 @@
                 <tbody>
                     <tr ng-repeat="item in ctrl.leasing">
                         <td>
-                            <waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
                         <td>{{item.extras.fee}}</td>
-                        <td>{{item.timestamp|wavesdate}}</td>
+                        <td>{{item.timestamp|lunesdate}}</td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.recipient" max-length="12"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.recipient" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>{{item.extras.amount.amount}}</td>
                     </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </lunes-transaction-table>
 
-        <waves-transaction-table title="Cancel leasing [type = 9]" ng-show="ctrl.leasingCancel.length > 0">
+        <lunes-transaction-table title="Cancel leasing [type = 9]" ng-show="ctrl.leasingCancel.length > 0">
             <table class="table blockDetails">
                 <thead>
                     <tr class="active">
@@ -322,22 +322,22 @@
                 <tbody>
                     <tr ng-repeat="item in ctrl.leasingCancel">
                         <td>
-                            <waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
                         <td>{{item.extras.fee}}</td>
-                        <td>{{item.timestamp|wavesdate}}</td>
+                        <td>{{item.timestamp|lunesdate}}</td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.sender"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.sender"></lunes-endpoint-ref>
                         </td>
                         <td>
-                            <waves-transaction-ref tx-id="item.leaseId"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.leaseId"></lunes-transaction-ref>
                         </td>
                     </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </lunes-transaction-table>
 
-        <waves-transaction-table title="Aliases [type = 10]" ng-show="ctrl.alias.length > 0">
+        <lunes-transaction-table title="Aliases [type = 10]" ng-show="ctrl.alias.length > 0">
             <table class="table blockDetails">
                 <thead>
                     <tr class="active">
@@ -351,20 +351,20 @@
                 <tbody>
                     <tr ng-repeat="item in ctrl.alias">
                         <td>
-                            <waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
                         <td>{{item.extras.fee}}</td>
-                        <td>{{item.timestamp|wavesdate}}</td>
+                        <td>{{item.timestamp|lunesdate}}</td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.sender" max-length="12"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>{{item.alias}}</td>
                     </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </lunes-transaction-table>
 
-        <waves-transaction-table title="Mass payments [type = 11]" ng-show="ctrl.massPayment.length > 0">
+        <lunes-transaction-table title="Mass payments [type = 11]" ng-show="ctrl.massPayment.length > 0">
             <table class="table blockDetails">
                 <thead>
                     <tr class="active">
@@ -380,15 +380,15 @@
                 <tbody>
                     <tr ng-repeat="item in ctrl.massPayment">
                         <td>
-                            <waves-transaction-ref tx-id="item.id" max-length="12"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
-                        <td>{{item.timestamp|wavesdate}}</td>
+                        <td>{{item.timestamp|lunesdate}}</td>
                         <td>
-                            <waves-endpoint-ref endpoint="item.sender"></waves-endpoint-ref>
+                            <lunes-endpoint-ref endpoint="item.sender"></lunes-endpoint-ref>
                         </td>
                         <td ng-if="item.assetId === null">{{item.extras.amount.currency}}</td>
                         <td ng-if="item.assetId !== null">
-                            <waves-transaction-ref tx-id="item.assetId" text="item.extras.amount.currency"></waves-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.assetId" text="item.extras.amount.currency"></lunes-transaction-ref>
                         </td>
                         <td>{{item.extras.amount.amount}}</td>
                         <td>{{item.transferCount}}</td>
@@ -396,6 +396,6 @@
                     </tr>
                 </tbody>
             </table>
-        </waves-transaction-table>
+        </lunes-transaction-table>
     </div>
 </div>
