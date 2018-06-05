@@ -87,7 +87,7 @@
                             <span class="pull-right">{{item.extras.amount.amount}}</span>
                         </td>
                         <td>
-                            <span class="pull-right">{{item.extras.amount.currency}}</span>
+                            <span class="pull-right">{{item.extras.amount.currency == 'WAVES'? 'LUNES' : item.extras.amount.currency}}</span>
                         </td>
                     </tr>
                 </tbody>
@@ -193,9 +193,9 @@
                             <lunes-endpoint-ref endpoint="item.recipient" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>{{item.extras.amount.amount}}</td>
-                        <td ng-if="item.assetId === null">{{item.extras.amount.currency}}</td>
+                        <td ng-if="item.assetId === null">{{item.extras.amount.currency == 'WAVES'? 'LUNES' : item.extras.amount.currency}}</td>
                         <td ng-if="item.assetId !== null">
-                            <lunes-transaction-ref tx-id="item.assetId" text="item.extras.amount.currency"></lunes-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.assetId" text="item.extras.amount.currency == 'WAVES'? 'LUNES' : item.extras.amount.currency"></lunes-transaction-ref>
                         </td>
                     </tr>
                 </tbody>
@@ -227,7 +227,7 @@
                             <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
                         </td>
                         <td>
-                            <lunes-asset-ref asset-id="item.assetId" text="item.extras.amount.currency"></lunes-asset-ref>
+                            <lunes-asset-ref asset-id="item.assetId" text="item.extras.amount.currency == 'WAVES'? 'LUNES' : item.extras.amount.currency"></lunes-asset-ref>
                         </td>
                         <td>
                             <span class="pull-right">{{item.extras.amount.amount}}</span>
@@ -262,7 +262,7 @@
                         <td>{{item.extras.total.amount}}</td>
                         <td>
                             <nobr>
-                                <lunes-asset-ref asset-id="item.order1.assetPair.amountAsset" text="item.extras.amount.currency"></lunes-asset-ref> /
+                                <lunes-asset-ref asset-id="item.order1.assetPair.amountAsset" text="item.extras.amount.currency == 'WAVES'? 'LUNES' : item.extras.amount.currency"></lunes-asset-ref> /
                                 <lunes-asset-ref asset-id="item.order1.assetPair.priceAsset" text="item.extras.priceCurrency"></lunes-asset-ref>
                             </nobr>
                         </td>
@@ -386,9 +386,9 @@
                         <td>
                             <lunes-endpoint-ref endpoint="item.sender"></lunes-endpoint-ref>
                         </td>
-                        <td ng-if="item.assetId === null">{{item.extras.amount.currency}}</td>
+                        <td ng-if="item.assetId === null">{{item.extras.amount.currency == 'WAVES'? 'LUNES' : item.extras.amount.currency}}</td>
                         <td ng-if="item.assetId !== null">
-                            <lunes-transaction-ref tx-id="item.assetId" text="item.extras.amount.currency"></lunes-transaction-ref>
+                            <lunes-transaction-ref tx-id="item.assetId" text="item.extras.amount.currency == 'WAVES'? 'LUNES' : item.extras.amount.currency"></lunes-transaction-ref>
                         </td>
                         <td>{{item.extras.amount.amount}}</td>
                         <td>{{item.transferCount}}</td>
