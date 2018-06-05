@@ -75,7 +75,7 @@
                         <td>
                             <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
-                        <td>{{item.extras.fee}}</td>
+                        <td>{{ (item.extras.fee).replace('WAVES','LUNES') }}</td>
                         <td>{{item.timestamp|lunesdate}}</td>
                         <td>
                             <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
@@ -114,7 +114,7 @@
                         <td>
                             <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
-                        <td>{{item.extras.fee}}</td>
+                        <td>{{ (item.extras.fee).replace('WAVES','LUNES') }}</td>
                         <td>{{item.timestamp|lunesdate}}</td>
                         <td>
                             <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
@@ -150,7 +150,7 @@
                         <td>
                             <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
-                        <td>{{item.extras.fee}}</td>
+                        <td>{{ (item.extras.fee).replace('WAVES','LUNES') }}</td>
                         <td>{{item.timestamp|lunesdate}}</td>
                         <td>
                             <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
@@ -184,7 +184,7 @@
                         <td>
                             <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
-                        <td>{{item.extras.fee}}</td>
+                        <td>{{ (item.extras.fee).replace('WAVES','LUNES') }}</td>
                         <td>{{item.timestamp|lunesdate}}</td>
                         <td>
                             <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
@@ -221,7 +221,7 @@
                         <td>
                             <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
-                        <td>{{item.extras.fee}}</td>
+                        <td>{{ (item.extras.fee).replace('WAVES','LUNES') }}</td>
                         <td>{{item.timestamp|lunesdate}}</td>
                         <td>
                             <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
@@ -294,7 +294,7 @@
                         <td>
                             <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
-                        <td>{{item.extras.fee}}</td>
+                        <td>{{ (item.extras.fee).replace('WAVES','LUNES') }}</td>
                         <td>{{item.timestamp|lunesdate}}</td>
                         <td>
                             <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
@@ -324,7 +324,7 @@
                         <td>
                             <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
-                        <td>{{item.extras.fee}}</td>
+                        <td>{{ (item.extras.fee).replace('WAVES','LUNES') }}</td>
                         <td>{{item.timestamp|lunesdate}}</td>
                         <td>
                             <lunes-endpoint-ref endpoint="item.sender"></lunes-endpoint-ref>
@@ -353,7 +353,7 @@
                         <td>
                             <lunes-transaction-ref tx-id="item.id" max-length="12"></lunes-transaction-ref>
                         </td>
-                        <td>{{item.extras.fee}}</td>
+                        <td>{{ (item.extras.fee).replace('WAVES','LUNES') }}</td>
                         <td>{{item.timestamp|lunesdate}}</td>
                         <td>
                             <lunes-endpoint-ref endpoint="item.sender" max-length="12"></lunes-endpoint-ref>
@@ -392,7 +392,7 @@
                         </td>
                         <td>{{item.extras.amount.amount}}</td>
                         <td>{{item.transferCount}}</td>
-                        <td>{{item.extras.fee}}</td>
+                        <td>{{ (item.extras.fee).replace('WAVES','LUNES') }}</td>
                     </tr>
                 </tbody>
             </table>

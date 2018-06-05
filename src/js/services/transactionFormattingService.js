@@ -302,7 +302,7 @@
                     updateFee(item);
                     updateAmount(item);
                 };
-
+                
                 processTransaction(item);
             });
 
