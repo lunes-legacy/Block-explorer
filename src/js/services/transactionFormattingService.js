@@ -70,7 +70,7 @@
             return Currency.create({
                 id: transaction.assetId,
                 displayName: transaction.name,
-                precision: transaction.decimals
+                precision: 12
             });
         }
 
