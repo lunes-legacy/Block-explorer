@@ -68,8 +68,8 @@
                                 <td ng-if="item.recipient===ctrl.address">
                                     <span class="mono">{{item.recipient|limitTo:16}}&hellip;</span>
                                 </td>
-                                <td>{{item.amountIn.amount}} {{item.amountIn.currency}}</td>
-                                <td>{{item.amountOut.amount}} {{item.amountOut.currency}}</td>
+                                <td>{{item.amountIn.amount}} {{item.amountIn.currency == 'WAVES'? 'LUNES' : item.amountIn.currency}}</td>
+                                <td>{{item.amountOut.amount}} {{item.amountOut.currency == 'WAVES'? 'LUNES' : item.amountOut.currency}}</td>
                                 <td>{{item.extras.price}}</td>
                             </tr>
                         </tbody>

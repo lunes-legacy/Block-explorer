@@ -17,11 +17,11 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Amount</div>
-                <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency}}</div>
+                <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency == 'WAVES'? 'LUNES' : ctrl.details.extras.amount.currency}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Fee</div>
-                <div class="profile-info-value">{{ctrl.details.extras.fee}}</div>
+                <div class="profile-info-value">{{ (ctrl.details.extras.fee).replace('WAVES','LUNES') }}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Sender</div>
@@ -76,7 +76,7 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Fee</div>
-                <div class="profile-info-value">{{ctrl.details.extras.fee}}</div>
+                <div class="profile-info-value">{{ (ctrl.details.extras.fee).replace('WAVES','LUNES') }}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Issuer</div>
@@ -107,7 +107,7 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Amount</div>
-                <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency}}</div>
+                <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency == 'WAVES'? 'LUNES' : ctrl.details.extras.amount.currency}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Attachment</div>
@@ -115,7 +115,7 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Fee</div>
-                <div class="profile-info-value">{{ctrl.details.extras.fee}}</div>
+                <div class="profile-info-value">{{ (ctrl.details.extras.fee).replace('WAVES','LUNES') }}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Sender</div>
@@ -154,11 +154,11 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Quantity</div>
-                <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency}}</div>
+                <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency == 'WAVES'? 'LUNES' : ctrl.details.extras.amount.currency}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Fee</div>
-                <div class="profile-info-value">{{ctrl.details.extras.fee}}</div>
+                <div class="profile-info-value">{{ (ctrl.details.extras.fee).replace('WAVES','LUNES') }}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Issuer</div>
@@ -189,11 +189,11 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Amount</div>
-                <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency}}</div>
+                <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency == 'WAVES'? 'LUNES' : ctrl.details.extras.amount.currency}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Fee</div>
-                <div class="profile-info-value">{{ctrl.details.extras.fee}}</div>
+                <div class="profile-info-value">{{ (ctrl.details.extras.fee).replace('WAVES','LUNES') }}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Issuer</div>
@@ -229,11 +229,11 @@
                 </div>
                 <div class="profile-info-row">
                     <div class="profile-info-name">Amount</div>
-                    <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency}}</div>
+                    <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency == 'WAVES'? 'LUNES' : ctrl.details.extras.amount.currency}}</div>
                 </div>
                 <div class="profile-info-row">
                     <div class="profile-info-name">Total</div>
-                    <div class="profile-info-value">{{ctrl.details.extras.total.amount}} {{ctrl.details.extras.total.currency}}</div>
+                    <div class="profile-info-value">{{ctrl.details.extras.total.amount}} {{ctrl.details.extras.total.currency == 'WAVES'? 'LUNES' : ctrl.details.extras.total.currency}}</div>
                 </div>
                 <div class="profile-info-row">
                     <div class="profile-info-name">Buy Matcher Fee</div>
@@ -249,7 +249,7 @@
             <div class="profile-user-info profile-user-info-striped">
                 <div class="profile-info-row">
                     <div class="profile-info-name">Amount Asset</div>
-                    <div class="profile-info-value"><lunes-asset-ref asset-id="ctrl.details.order1.assetPair.amountAsset" text="ctrl.details.extras.amount.currency"></lunes-asset-ref></div>
+                    <div class="profile-info-value"><lunes-asset-ref asset-id="ctrl.details.order1.assetPair.amountAsset" text="ctrl.details.extras.amount.currency == 'WAVES'? 'LUNES' : ctrl.details.extras.amount.currency"></lunes-asset-ref></div>
                 </div>
                 <div class="profile-info-row">
                     <div class="profile-info-name">Price Asset</div>
@@ -329,11 +329,11 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Amount</div>
-                <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency}}</div>
+                <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency == 'WAVES'? 'LUNES' : ctrl.details.extras.amount.currency}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Fee</div>
-                <div class="profile-info-value">{{ctrl.details.extras.fee}}</div>
+                <div class="profile-info-value">{{ (ctrl.details.extras.fee).replace('WAVES','LUNES')}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Sender</div>
@@ -368,7 +368,7 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Fee</div>
-                <div class="profile-info-value">{{ctrl.details.extras.fee}}</div>
+                <div class="profile-info-value">{{ (ctrl.details.extras.fee).replace('WAVES','LUNES')}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Sender</div>
@@ -399,7 +399,7 @@
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Fee</div>
-                <div class="profile-info-value">{{ctrl.details.extras.fee}}</div>
+                <div class="profile-info-value">{{ (ctrl.details.extras.fee).replace('WAVES','LUNES')}}</div>
             </div>
             <div class="profile-info-row">
                 <div class="profile-info-name">Sender</div>
@@ -427,7 +427,7 @@
                 </div>
                 <div class="profile-info-row">
                     <div class="profile-info-name">Total Amount</div>
-                    <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency}}</div>
+                    <div class="profile-info-value">{{ctrl.details.extras.amount.amount}} {{ctrl.details.extras.amount.currency == 'WAVES'? 'LUNES' : ctrl.details.extras.amount.currency}}</div>
                 </div>
                 <div class="profile-info-row">
                     <div class="profile-info-name">Transfers count</div>
@@ -439,7 +439,7 @@
                 </div>
                 <div class="profile-info-row">
                     <div class="profile-info-name">Fee</div>
-                    <div class="profile-info-value">{{ctrl.details.extras.fee}}</div>
+                    <div class="profile-info-value">{{ (ctrl.details.extras.fee).replace('WAVES','LUNES') }}</div>
                 </div>
                 <div class="profile-info-row">
                     <div class="profile-info-name">Sender</div>

@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-
+  
   angular.module("web").constant("appConfig", {
     apiDomain: "https://lunesnode-testnet.lunes.io",
     blockchainName: "Mainnet",
