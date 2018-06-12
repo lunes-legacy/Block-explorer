@@ -34,7 +34,7 @@
                         ctrl.details.order2.address = cryptoService.buildRawAddress(ctrl.details.order2.senderPublicKey);
                     }
                 } else if (ctrl.details.type === constants.MASS_PAYMENT_TRANSACTION_TYPE) {
-                    var currency = Currency.WAVES;
+                    var currency = Currency.LUNES;
                     if (ctrl.details.assetId)
                         currency = Currency.create({id: ctrl.details.assetId});
 

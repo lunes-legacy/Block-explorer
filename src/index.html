@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="" />
-    <link href="https://res.cloudinary.com/luneswallet/image/upload/v1519442468/icon-lunes_qhumiw.png" type="image/x-icon" rel="icon" />
-    <link href="https://res.cloudinary.com/luneswallet/image/upload/v1519442468/icon-lunes_qhumiw.png" type="image/x-icon" rel="shortcut icon" />
+    <link href="https://res.cloudinary.com/luneswallet/image/upload/v1519442468/icon-lunes_qhumiw.png" type="image/x-icon" rel="icon"
+    />
+    <link href="https://res.cloudinary.com/luneswallet/image/upload/v1519442468/icon-lunes_qhumiw.png" type="image/x-icon" rel="shortcut icon"
+    />
     <title>Lunes Explorer</title>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 
@@ -16,47 +18,70 @@
 
 <body class="skin1" ng-cloak>
     <div growl></div>
-    <div id="navbar" class="navbar navbar-default">
         <div class="navbar-container container" id="navbar-container">
-            <div class="navbar-header pull-left">
-                <a href="/" class="navbar-brand"> 
-                    <span id="logo" >
-                        <span class="logolunes">L</span>
-                        <span class="logolunes">u</span>
-                        <span class="logolunes">n</span>
-                        <span class="logolunes green-word">e</span>
-                        <span class="logolunes">s</span>
-                    </span>
-                </a>
-                
-            </div>
-            <nav role="navigation" class="navbar-menu navbar-collapse collapse pull-right no-padding" id="navbar-main">
-                <ul class="nav navbar-nav" ng-controller="NavigationCtrl as nav">
-                    <li ng-repeat="item in nav.menuItems track by $index">
-                        <a ui-sref="{{item.url}}"><img src="{{item.icon}}"></img> {{item.title}}</a>
-                    </li>
-                    <li>
-                        <a ng-href="{{::nav.wallet.url}}" target="_blank">
-                            <img src="../icons/wallet.svg"> {{::nav.wallet.title}}
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header col-xs-12 col-sm-12 col-md-2 ">
+                        <button type="button" class="navbar-toggle collapsed text-left" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                            aria-expanded="false">
+                            <span class="sr-only">Menu</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="/" class="navbar-brand ">
+                            <span id="logo">
+                                <span class="logolunes">L</span>
+                                <span class="logolunes">u</span>
+                                <span class="logolunes">n</span>
+                                <span class="logolunes green-word">e</span>
+                                <span class="logolunes">s</span>
+                            </span>
                         </a>
-                    </li>
-                    <li uib-dropdown>
-                        <a href="#" class="dropdown-toggle" uib-dropdown-toggle role="button" aria-expanded="true">
-                            <img src="../icons/misc.svg"> Misc <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-light-blue " role="menu" uib-dropdown-menu>
-                            <li><a ng-href="{{::nav.peerExplorer.url}}" target="_blank">{{::nav.peerExplorer.title}}</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <form class="navbar-form navbar-right form-search" role="search" ng-controller="SearchCtrl">
-                    <div class="form-group">
-                        <input type="text" ng-model="searchQuery" placeholder="Address / Tx sig / Block sig" name="q">
                     </div>
-                    <button class="btn btn-mini btn-info2" ng-click="search()"><img src="../icons/pesquisas.svg" style="width:20px;"></button>
-                </form>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    
+                        <ul class="nav navbar-nav" ng-controller="NavigationCtrl as nav">
+                            <li ng-repeat="item in nav.menuItems track by $index">
+                                <a ui-sref="{{item.url}}">
+                                    <img src="{{item.icon}}"></img> {{item.title}}</a>
+                            </li>
+                            <li>
+                                <a ng-href="{{::nav.wallet.url}}" target="_blank">
+                                    <img src="../icons/wallet.svg"> {{::nav.wallet.title}}
+                                </a>
+                            </li>
+                            <li uib-dropdown>
+                                <a href="#" class="dropdown-toggle" uib-dropdown-toggle role="button" aria-expanded="true">
+                                    <img src="../icons/misc.svg"> Misc
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-light-blue " role="menu" uib-dropdown-menu>
+                                    <li>
+                                        <a ng-href="{{::nav.peerExplorer.url}}" target="_blank">{{::nav.peerExplorer.title}}</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    
+                        <form class="navbar-form form-search col-xs-12 col-sm-2 col-md-4 " role="search" ng-controller="SearchCtrl">
+                            <div class="form-group">
+                                <input type="text" ng-model="searchQuery" placeholder="Address / Tx sig / Block sig" name="q" style="font-size:10px;">
+                            </div>
+                            <button class="btn btn-mini btn-info2" ng-click="search()">
+                                <img src="../icons/pesquisas.svg" style="width:20px;">
+                            </button>
+                        </form>
+
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
             </nav>
+
         </div>
     </div>
 
@@ -69,38 +94,51 @@
                 <!-- <a class="btn-scroll-up" id="btn-scroll-up" href="#teste_2"><i class="fa fa-arrow-up"></i></a> -->
             </div>
         </div>
-        
+
         <div class="footer">
             <div class="footer-inner">
-                <div class="footer-content">
-                            <span id="logo" class="text-left" style="float:left; letter-spacing:-6px;font-size:28px;">
-                                    <span class="logolunes">L</span>
-                                    <span class="logolunes">u</span>
-                                    <span class="logolunes">n</span>
-                                    <span class="logolunes green-word">e</span>
-                                    <span class="logolunes">s</span>      
-                                </span>
-                    
-                    <span class=" bigger-150">
-                        <a href="https://www.facebook.com/lunesplatform/" target="_blank" title="Facebook"><img src="/icons/fb.png" height="30px" width="30px"></a>
-                        <a href="https://medium.com/@lunes.platform" target="_blank" title="Medium"><img src="/icons/medium.png" height="30px" width="30px"></a>
-                        <a href="https://t.me/LunesPlatformEN" target="_blank" title="Telegram"><img src="/icons/telegram.png" height="30px" width="30px"></a>
-                        <a href="https://twitter.com/lunesplatform" target="_blank" title="Twitter"><img src="/icons/twitter.png" height="30px" width="30px"></a> 
-                        <a href="https://github.com/Lunes-platform" target="_blank" title="GitHub"><img src="/icons/github.png" height="30px" width="30px"></a>                       
-                        <a href="https://lunes.io/" target="_blank" title="Website"><img src="/icons/lunes.png" height="30px" width="30px"></a>                        
-                        
+                <div class="footer-content ">
+                    <span id="logo" class="text-left col-xs-12 col-sm-6" style="float:left; letter-spacing:-6px;font-size:28px;">
+                        <span class="logolunes">L</span>
+                        <span class="logolunes">u</span>
+                        <span class="logolunes">n</span>
+                        <span class="logolunes green-word">e</span>
+                        <span class="logolunes">s</span>
+                    </span>
+
+                    <span class=" bigger-150" >
+                        <a href="https://www.facebook.com/lunesplatform/" target="_blank" title="Facebook">
+                            <img src="/icons/fb.png" height="28px" width="28px">
+                        </a>
+                        <a href="https://medium.com/@lunes.platform" target="_blank" title="Medium">
+                            <img src="/icons/medium.png" height="28px" width="28px">
+                        </a>
+                        <a href="https://t.me/LunesPlatformEN" target="_blank" title="Telegram">
+                            <img src="/icons/telegram.png" height="28px" width="28px">
+                        </a>
+                        <a href="https://twitter.com/lunesplatform" target="_blank" title="Twitter">
+                            <img src="/icons/twitter.png" height="28px" width="28px">
+                        </a>
+                        <a href="https://github.com/Lunes-platform" target="_blank" title="GitHub">
+                            <img src="/icons/github.png" height="28px" width="28px">
+                        </a>
+                        <a href="https://lunes.io/" target="_blank" title="Website">
+                            <img src="/icons/lunes.png" height="28px" width="28px">
+                        </a>
+
                     </span>
                 </div>
             </div>
         </div>
 
-        
-                <!-- <a class="btn-scroll-up btn btn-sm display" id="btn-scroll-up" href="javascript: void();"><i class="fa fa-arrow-up"></i></a> -->
+
+        <!-- <a class="btn-scroll-up btn btn-sm display" id="btn-scroll-up" href="javascript: void();"><i class="fa fa-arrow-up"></i></a> -->
 
     </div>
 
     <script src="//www.google.com/recaptcha/api.js?render=explicit&onload=vcRecaptchaApiLoaded" async defer></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- inject:js -->
     <!-- endinject -->
 </body>

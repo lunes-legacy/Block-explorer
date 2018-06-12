@@ -1,4 +1,4 @@
-<waves-page-header title="Peers"></waves-page-header>
+<lunes-page-header title="Peers"></lunes-page-header>
 <div class="row">
     <div class="col-lg-12">
         <ul class="nav nav-tabs" data-tabs="tabs">
@@ -11,7 +11,7 @@
         </ul>
 
         <div id="" class="tab-content">
-            <div class="tab-pane fade active in" id="connected">
+            <div style="overflow-x:auto;" class="tab-pane fade active in" id="connected">
                 <table class="table">
                     <thead>
                         <tr class="active">
@@ -46,7 +46,7 @@
                             <td>{{item.address}}</td>
                             <td>{{item.nodeName}}</td>
                             <td>{{item.nodeNonce}}</td>
-                            <td>{{item.lastSeen|wavesdate}}</td>
+                            <td>{{item.lastSeen|lunesdate}}</td>
                         </tr>
                     </tbody>
                 </table>

@@ -201,19 +201,19 @@ gulp.task('distr', ['clean', 'patch-html'], function () {
 });
 
 gulp.task('publish-testnet', ['distr'], function () {
-    var credentials = awsCredentials('eu-central-1', 'testnet.wavesexplorer.com');
+    var credentials = awsCredentials('eu-central-1', 'blockexplorer-testnet.lunes.io/');
 
     return publishToS3(credentials, config.releaseDirectory + '/testnet/**');
 });
 
 gulp.task('publish-mainnet', ['distr'], function () {
-    var credentials = awsCredentials('eu-central-1', 'wavesexplorer.com');
+    var credentials = awsCredentials('eu-central-1', 'blockexplorer-testnet.lunes.io/');
 
     return publishToS3(credentials, config.releaseDirectory + '/mainnet/**');
 });
 
 gulp.task('publish-devnet', ['distr'], function () {
-    var credentials = awsCredentials('eu-west-1', 'devnet.wavesexplorer.com');
+    var credentials = awsCredentials('eu-west-1', 'blockexplorer-testnet.lunes.io/');
 
     return publishToS3(credentials, config.releaseDirectory + '/devnet/**');
 });

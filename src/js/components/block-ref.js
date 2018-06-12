@@ -3,7 +3,7 @@
 
     angular
         .module('web')
-        .component('wavesBlockRef', {
+        .component('lunesBlockRef', {
             bindings: {
                 height: '<'
             },

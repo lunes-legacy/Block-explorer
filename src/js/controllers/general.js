@@ -4,7 +4,7 @@
     function GeneralCtrl($http, apiService) {
         var ctrl = this;
         ctrl.consensus = {};
-        ctrl.consensus.algo = 'waves';
+        ctrl.consensus.algo = 'lunes';
 
         activate();
 

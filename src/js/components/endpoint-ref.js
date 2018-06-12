@@ -4,7 +4,7 @@
     var ADDRESS_PREFIX = 'address:';
 
 
-    function WavesEndpointRefController(aliasService) {
+    function LunesEndpointRefController(aliasService) {
         var ctrl = this;
 
         function adjustBindings() {
@@ -42,8 +42,8 @@
 
     angular
         .module('web')
-        .component('wavesEndpointRef', {
-            controller: ['aliasService', WavesEndpointRefController],
+        .component('lunesEndpointRef', {
+            controller: ['aliasService', LunesEndpointRefController],
             bindings: {
                 endpoint: '<',
                 maxLength: '<?'

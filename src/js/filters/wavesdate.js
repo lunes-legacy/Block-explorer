@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('web').filter('wavesdate', function($filter) {
+    angular.module('web').filter('lunesdate', function($filter) {
         var originalDateFilter = $filter('date');
 
         return function(input) {

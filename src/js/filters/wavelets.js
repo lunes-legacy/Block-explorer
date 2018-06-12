@@ -1,11 +1,11 @@
 (function() {
     'use strict';
 
-    angular.module('web').filter('wavelets', function() {
+    angular.module('web').filter('luneslets', function() {
         return function(input) {
             if (input == null) return null;
-            var waves = input / 100000000;
-            var str = addCommas(waves.toFixed(8));
+            var lunes = input / 100000000;
+            var str = addCommas(lunes.toFixed(8));
 
             // remove trailing zeros
             var parts = str.split('.');
