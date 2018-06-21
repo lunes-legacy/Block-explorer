@@ -23,7 +23,7 @@
                     }
                 })
                 .state('alias-details', {
-                    url: '/alias/:alias',
+                    url: '/addresses/alias/:alias',
                     views: {
                         "main": {
                             controller: 'AliasDetailsCtrl as ctrl',
