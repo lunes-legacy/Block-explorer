@@ -2,9 +2,9 @@
     'use strict';
 
     angular.module('web').filter('assetunits', function() {
-        return function(input, decimals) {
+        return function(input, decimals = 8) {
             if (input == null) return null;
-            var lunes = input / Math.pow(10, decimals);
+            var lunes = Number(input.replace(/\D/, '')) / (10 ** decimals);
             var str = addCommas(lunes.toFixed(decimals));
 
             // remove trailing zeros
