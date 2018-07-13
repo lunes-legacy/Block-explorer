@@ -3,7 +3,7 @@
 
     angular.module('web').filter('assetunits', function() {
         return function(input, decimals = 8) {
-            if (input == null) return null;
+            if (input == null || !Number(input)) return null;
             var lunes = Number(input.replace(/\D/, '')) / (10 ** decimals);
             var str = addCommas(lunes.toFixed(decimals));
 
