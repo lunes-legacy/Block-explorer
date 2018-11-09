@@ -32,7 +32,7 @@
             menuItems.push({
                 url: 'richlist',
                 title: 'RichList',
-                icon: '../../icons/node.svg'
+                icon: '../../icons/rich_list2x.png'
             });
             nav.menuItems = menuItems;
 
