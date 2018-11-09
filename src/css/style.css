@@ -84,3 +84,23 @@
     border-top-color:  #5e4094;
     border-left-color: #5e4094;
 }
+
+.richlist-header {
+    margin: 0 0 12px;
+    border-bottom: 1px dotted #E2E2E2;
+    padding-bottom: 16px;
+    padding-top: 7px;
+  }
+  .richlist-header h1 {
+    padding: 0;
+    margin: 0 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #54d467;
+  }
+  .richlist-header h1 small {
+    margin: 0 6px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #c0c6d6;
+  }
