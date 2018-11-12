@@ -29,6 +29,11 @@
                 title: 'Nodes',
                 icon: '../../icons/node.svg'
             });
+            menuItems.push({
+                url: 'richlist',
+                title: 'RichList',
+                icon: '../../icons/rich_list2x.png'
+            });
             nav.menuItems = menuItems;
 
             nav.wallet = config.wallet;

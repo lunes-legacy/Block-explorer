@@ -138,6 +138,11 @@ gulp.task('copy-html', ['clean'], function () {
     return copyFiles(config.baseDir + '/index.html', config.buildDirectory);
 });
 
+
+gulp.task('copy-csv', ['clean'], function () {
+    return copyFiles(config.baseDir + '/*.csv', config.buildDirectory);
+});
+
 gulp.task('templates', function () {
     return gulp.src(config.html)
         .pipe(templateCache(
@@ -189,7 +194,7 @@ gulp.task('build-default-config', function () {
     return createConfig(config.buildDirectory, 'mainnet');
 });
 
-gulp.task('resources', ['copy-css', 'copy-fonts', 'copy-icons', 'copy-html']);
+gulp.task('resources', ['copy-css', 'copy-fonts', 'copy-icons', 'copy-html', 'copy-csv']);
 gulp.task('default', ['build']);
 gulp.task('build', ['clean', 'patch-html']);
 gulp.task('distr', ['clean', 'patch-html'], function () {
