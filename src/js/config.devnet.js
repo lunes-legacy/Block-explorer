@@ -13,7 +13,7 @@
             title: 'Devnet Explorer'
         },
         wallet: {
-            url: 'https://wallet.lunes.io/',
+            url: 'https://luneswallet.app/',
             title: 'Wallet'
         }
     });

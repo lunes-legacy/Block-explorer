@@ -52,10 +52,10 @@
             },
             aliases: {
                 getAddress: function (alias) {
-                    return url + '/alias/by-alias/' + encodeURIComponent(alias);
+                    return url + '/addresses/alias/by-alias/' + encodeURIComponent(alias);
                 },
                 forAddress: function (address) {
-                    return url + '/alias/by-address/' + address;
+                    return url + '/addresses/alias/by-address/' + address;
                 }
             },
             assets: {
