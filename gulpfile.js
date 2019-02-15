@@ -32,7 +32,7 @@ const config = {
             'node_modules/angular-growl-v2/build/angular-growl.js',
             'node_modules/wavesplatform-core-js/distr/wavesplatform-core.js'
         ],
-        version: '1.6.9' // change this version if libraries are updated or changed
+        version: '1.6.10' // change this version if libraries are updated or changed
     },
     styles: [
         'node_modules/angular/angular-csp.css',
@@ -135,7 +135,11 @@ gulp.task('copy-icons', ['clean'], function () {
 });
 
 gulp.task('copy-html', ['clean'], function () {
-    return copyFiles(config.baseDir + '/index.html', config.buildDirectory);
+    return series(
+        copyFiles(config.baseDir + '/index.html', config.buildDirectory),
+        copyFiles(config.baseDir + '/total_supply.html', config.buildDirectory),
+        copyFiles(config.baseDir + '/circulating_supply.html', config.buildDirectory)
+    )
 });
 
 
@@ -162,7 +166,7 @@ gulp.task('bump', function () {
         .pipe(git.commit('chore(version): bumping version'));
 });
 
-gulp.task('patch-html', ['resources', 'scripts', 'templates', 'build-default-config'], function () {
+gulp.task('patch-html', ['resources', 'templates', 'build-default-config', 'scripts'], function () {
     return gulp.src(config.buildDirectory + '/index.html')
         .pipe(inject(series(
             gulp.src(config.buildDirectory + '/css/*.css', {read: false}),
