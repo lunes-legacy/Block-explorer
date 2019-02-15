@@ -93,6 +93,15 @@
                             templateUrl: '/templates/nodes.html'
                         }
                     }
+                })
+                .state('richlist', {
+                    url: '/richlist',
+                    views: {
+                        "main": {
+                            controller: 'RichListCtrl as ctrl',
+                            templateUrl: '/templates/richlist.html'
+                        }
+                    }
                 });
 
             $locationProvider.html5Mode({
