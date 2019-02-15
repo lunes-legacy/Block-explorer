@@ -25,6 +25,16 @@ app.get('/*', function(req, res){
   res.sendFile(basedir + '/index.html');
 });
 
+app.get('/stats/total_supply', function(req, res){
+  res.set('Access-Control-Allow-Origin','*');
+  res.sendFile(basedir + '/total_supply.html');
+});
+app.get('/stats/circulating_supply', function(req,res){
+  res.set('Access-Control-Allow-Origin','*');
+  res.sendFile(basedir + '/circulating_supply.html');
+});
+
+
 // development only
 if ('development' === app.get('env')) {
   app.use(errorhandler());
