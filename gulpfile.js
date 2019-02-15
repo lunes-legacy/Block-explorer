@@ -137,11 +137,11 @@ gulp.task('copy-icons', ['clean'], function () {
 gulp.task('copy-html', ['clean'], function () {
     return series(
         copyFiles(config.baseDir + '/index.html', config.buildDirectory),
+        copyFiles(config.baseDir + '/richlist.csv', config.buildDirectory),
         copyFiles(config.baseDir + '/total_supply.html', config.buildDirectory),
         copyFiles(config.baseDir + '/circulating_supply.html', config.buildDirectory)
     )
 });
-
 
 gulp.task('copy-csv', ['clean'], function () {
     return copyFiles(config.baseDir + '/*.csv', config.buildDirectory);
