@@ -4,7 +4,7 @@ Lunes Blockchain Explorer
 
 # Demo
 
-Demo is available on http://blockchain-testnet.lunes.io
+Demo is available on http://blockexplorer-testnet.lunes.io
 
 # Setup
 
