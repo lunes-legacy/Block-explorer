@@ -10,9 +10,10 @@ Demo is available on http://blockchain-testnet.lunes.io
 
 Install [NodeJS](https://nodejs.org/en/download/)
 
-Install gulp:
+Install gulp and bower:
 ```
 npm install -g gulp-cli
+npm install -g bower
 ```
 
 # Run locally
