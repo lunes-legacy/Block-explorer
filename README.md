@@ -1,6 +1,6 @@
-# Lunes Explorer Lite
+# Lunes Explorer
 
-Lunes Testnet Blockchain Explorer
+Lunes Blockchain Explorer
 
 # Demo
 
