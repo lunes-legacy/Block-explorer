@@ -106,12 +106,12 @@ function copyAndConfigureRelease(network) {
 }
 
 gulp.task('scripts', function() {
-    gulp.src(config.libraries.sources)
-        .pipe(concat(buildScriptName('vendor', config.libraries.version)))
-        .pipe(gulp.dest(config.buildDirectory + '/js'));
-
+    
     return series(
             gulp.src('src/js/app.js'),
+            gulp.src(config.libraries.sources)
+        .pipe(concat(buildScriptName('vendor', config.libraries.version)))
+        .pipe(gulp.dest(config.buildDirectory + '/js')),
             gulp.src(['src/js/**/*.js', '!src/js/app.js', '!src/js/config.*']))
         .pipe(concat(buildScriptName('bundle', config.package.data.version)))
         .pipe(gulp.dest(config.buildDirectory + '/js'));
