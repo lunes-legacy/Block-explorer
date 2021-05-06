@@ -19,7 +19,7 @@
     "decimal.js": "^5.0.8",
     "js-sha3": "^0.5.2",
     "restangular": "^1.6.1",
-    "underscore": "^1.8.3",
+    "underscore": "^1.12.1",
     "wavesplatform-core-js": "git://github.com/wavesplatform/wavesplatform.core.js.git#master"
   },
   "devDependencies": {
